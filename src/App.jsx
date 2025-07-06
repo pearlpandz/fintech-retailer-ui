@@ -60,7 +60,6 @@ function App() {
   return (
     <WebsocketProvider>
       <AuthContext.Provider value={{ isAuthenticated, userDetails, login, logout }}>
-        <Router>
           <Routes>
             {/* Public routes with sidebar banner */}
             <Route element={<PublicRoute />}>
@@ -121,10 +120,8 @@ function App() {
                 </Route>
 
               </Route>
-            </Route>
-
-          </Routes>
-        </Router>
+          </Route>
+        </Routes>
       </AuthContext.Provider>
     </WebsocketProvider>
   );
